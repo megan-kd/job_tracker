@@ -1,4 +1,4 @@
-import { Space, Button, Divider } from 'antd'
+import { Space, Button, Divider, Typography } from 'antd'
 import React from 'react'
 
 const TitleBar = () => {
@@ -7,22 +7,23 @@ const TitleBar = () => {
     }
 
     const dividerStyle = {
-        backgroundColor: "white",
-        width: "100%"
+        width: "100%",
+        backgroundColor: 'lime'
     }
 
     const titleStyle = {
-        fontFamily: 'Glitch Goblin'
+        fontFamily: 'Glitch Goblin',
+        color: 'lime',
     }
     return (
         <>
-            <Space direction='vertical' style={titleBarStyle}>
-                <div style={titleStyle}>Megan's 2023 Job Tracker</div>
+            <Space direction='vertical' style={titleBarStyle} align='center'>
+                <Typography.Title style={titleStyle} level={1}>Megan's 2024 Job Tracker</Typography.Title>
                 <Space direction='horizontal'>
-                    <Button />
+                    <Button>Placeholder for more buttons</Button>
                 </Space>
-                <Divider style={dividerStyle}/>
             </Space>
+            <Divider style={dividerStyle}/>
         </>
     )
 }

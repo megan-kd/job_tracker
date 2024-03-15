@@ -1,5 +1,5 @@
 import MainPage from './components/MainPage';
-import { ConfigProvider, Typography } from 'antd';
+import { ConfigProvider} from 'antd';
 import './fonts.css'
 
 function App() {
@@ -11,11 +11,10 @@ function App() {
             // Seed Token
             fontFamily: 'Summer Pixel',
             // Alias Token
-          },
+          }
         }}
       >
         <MainPage />
-        <Typography>Hello World</Typography>
       </ConfigProvider>
     </>
   );
