@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Glitch Goblin';
+    src: local('Glitch Goblin'), url('../public/fonts/glitch-goblin-font/GlitchGoblin-2O87v.ttf') format('truetype');
+  }
+  
+@font-face {
+    font-family: 'Summer Pixel';
+    src: local('webfontjE0W7'), url('../public/fonts/summer-pixel-22-font/SummerPixel22Regular-jE0W7.ttf') format('truetype');
+  }
+  
