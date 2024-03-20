@@ -102,8 +102,8 @@ def get_all_apps(sheet):
 def get_total_application_pie_data(dataset):
     if dataset == "status":
         return {"data": [
-            {"label": "rejected", "total": len(all_rejected_apps["data"])},
-            {"label": "waiting", "total": len(all_current_apps["data"])},
+            {"type": "rejected", "value": len(all_rejected_apps["data"])},
+            {"type": "waiting", "value": len(all_current_apps["data"])},
         ]}
     elif dataset == "responses":
         interviewed = 0
@@ -120,9 +120,9 @@ def get_total_application_pie_data(dataset):
                 not_interviewed += 1
 
         return {"data": [
-            {"label": "interviewed", "total": interviewed},
-            {"label": "no interview", "total": not_interviewed},
-            {"label": "ghosted", "total": ghosted},
+            {"type": "interviewed", "value": interviewed},
+            {"type": "no interview", "value": not_interviewed},
+            {"type": "ghosted", "value": ghosted},
         ]}
     else:
         return Response("Invalid Pie Data Type", status=400, mimetype='application/json')

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Space} from 'antd'
 import TitleBar from './TitleBar';
+import ChartGrid from './ChartGrid';
 
 const MainPage = () => {
     const mainPageStyle = {
@@ -12,6 +13,7 @@ const MainPage = () => {
         <>
             <Space direction='vertical' style={mainPageStyle}>
                 <TitleBar/>
+                <ChartGrid/>
             </Space>
         </>
     );
