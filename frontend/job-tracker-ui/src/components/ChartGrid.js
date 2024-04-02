@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import { Card, Col, Row, Switch } from 'antd';
 import AppStatusPie from './graphs/AppStatusPie';
 import { RESPONSE_OPTION, STATUS_OPTION } from '../constants';
+import AccountTallyCard from './cards/AccountTallyCard';
 
+// Card for AVG RESPONSE TIME
+// Card for Table of Companies and their response times (split by rejection, current) sort by  time asc, desc, search by company name
+// Card for number of workday (etc) accounts made to reply (total number of accounts made, then a total for each type)
+//
 const appStatusRespTabs = [
     {
         key: STATUS_OPTION,
@@ -67,6 +72,9 @@ const ChartGrid = () => {
                         <Switch defaultChecked={false} onChange={appStatusRespSwitchOnChange} checkedChildren="Percent" unCheckedChildren="Value"/>
                         <AppStatusPie dataset={activeStatusRespTabKey} data={appStatusRespData} isPercent={appStatusRespSwitch}/>
                     </Card>
+                </Col>
+                <Col span={14}>
+                  <AccountTallyCard />
                 </Col>
             </Row>
         </>

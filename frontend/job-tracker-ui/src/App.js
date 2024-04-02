@@ -27,6 +27,9 @@ function App() {
               colorPrimaryHover: "#006400",
               trackHeight: 24,
               fontFamily: 'Glitch Goblin',
+            },
+            Carousel: {
+              colorBgContainer: '#007200'
             }
           }
         }}

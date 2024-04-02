@@ -39,11 +39,11 @@ const AppStatusPie = (props) => {
     },
     plugins: {
       legend: {
-        position: 'bottom',
+        position: 'top',
         labels: {
           font: {
             family: 'Summer Pixel',
-            size: 14,
+            size: 18,
             weight: 'bold'
           }
         }
