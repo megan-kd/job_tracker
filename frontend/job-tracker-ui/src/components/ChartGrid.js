@@ -3,6 +3,7 @@ import { Card, Col, Row, Switch } from 'antd';
 import AppStatusPie from './graphs/AppStatusPie';
 import { RESPONSE_OPTION, STATUS_OPTION } from '../constants';
 import AccountTallyCard from './cards/AccountTallyCard';
+import AverageResponseTimeCard from './cards/AverageResponseTimeCard';
 
 // Card for AVG RESPONSE TIME
 // Card for Table of Companies and their response times (split by rejection, current) sort by  time asc, desc, search by company name
@@ -73,8 +74,11 @@ const ChartGrid = () => {
                         <AppStatusPie dataset={activeStatusRespTabKey} data={appStatusRespData} isPercent={appStatusRespSwitch}/>
                     </Card>
                 </Col>
-                <Col span={14}>
-                  <AccountTallyCard />
+                <Col span={8}>
+                    <AccountTallyCard />
+                </Col>
+                <Col span={7}>
+                    <AverageResponseTimeCard />
                 </Col>
             </Row>
         </>

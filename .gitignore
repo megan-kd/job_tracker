@@ -2,3 +2,4 @@
 venv/
 *.xlsx
 .DS_Store
+/backend/__pycache__/*
