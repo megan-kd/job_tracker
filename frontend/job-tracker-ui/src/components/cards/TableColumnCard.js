@@ -2,12 +2,13 @@ import React from 'react';
 import { Row, Col, Card } from 'antd';
 import AccountTallyCard from './AccountTallyCard';
 import AverageResponseTimeCard from './AverageResponseTimeCard';
+import ApplicationTable from '../ApplicationTable';
 
 
 const TableColumnCard = () => {
     return (
         <>
-            <Row justify={'space-around'}>
+            <Row gutter={[16, 16]} justify={'space-around'}>
                 <Col span={11}>
                     <AccountTallyCard />
                 </Col>
@@ -15,8 +16,10 @@ const TableColumnCard = () => {
                     <AverageResponseTimeCard />
                 </Col>
             </Row>
-            <Row justify={'space-around'}>
-                <Card/>
+            <Row gutter={[16, 16]} justify={'space-around'}>
+                <Col span={23}>
+                    <ApplicationTable />
+                </Col>
             </Row>
         </>
     )
