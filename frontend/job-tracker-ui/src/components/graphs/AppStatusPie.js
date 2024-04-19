@@ -42,8 +42,7 @@ const AppStatusPie = (props) => {
         position: 'top',
         labels: {
           font: {
-            family: 'Summer Pixel',
-            size: 18,
+            size: 14,
             weight: 'bold'
           }
         }

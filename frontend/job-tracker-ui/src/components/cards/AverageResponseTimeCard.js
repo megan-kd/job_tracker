@@ -1,22 +1,9 @@
 import React from 'react'
-import { Card, Space } from 'antd'
+import { Card, Empty, Space, Typography } from 'antd'
 import { responseTimeTestData } from '../../constants';
 
 const AverageResponseTimeCard = () => {
     const testData = responseTimeTestData;
-    const titleStyle = {
-        margin: 0,
-        fontSize: '3em',
-        color: 'black',
-        textAlign: 'center'
-    };
-
-    const contentStyle = {
-        margin: 0,
-        fontSize: '9em',
-        color: 'black',
-        textAlign: 'center'
-    };
 
     const getAvgResponse = () => {
         var sum = 0
@@ -34,15 +21,17 @@ const AverageResponseTimeCard = () => {
             <Card
                 style={{
                     background: "#9DF264",
-                    height: '320px',
                     alignContent: 'center',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    minHeight: '320px'
                 }}
+                title={ <Typography.Title style={{fontFamily: 'Glitch Goblin'}} level={3}>Average Response Time</Typography.Title>}
             >
-                <Space direction='vertical'>
-                    <h1 style={titleStyle}>Average Response Time</h1>
-                    <h2 style={contentStyle}>{getAvgResponse()} Days</h2>
-                </Space>
+               <Empty
+                description={
+                    <Typography.Title style={{fontFamily: 'Glitch Goblin'}} level={1}>{getAvgResponse()} Days</Typography.Title>
+                }
+               />
             </Card>
         </>
     )

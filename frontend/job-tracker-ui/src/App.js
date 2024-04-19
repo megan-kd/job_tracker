@@ -9,13 +9,14 @@ function App() {
         theme={{
           token: {
             // Seed Token
-            fontFamily: 'Summer Pixel',
+            //fontFamily: 'Summer Pixel',
             // Alias Token
           },
           components: {
             Card: {
-              fontFamily: 'Ugly Byte',
-              headerFontSize: 28
+              fontFamily: 'Glitch Goblin',
+              headerFontSize: 28,
+              headerHeight: 80
             },
             Tabs: {
               itemSelectedColor: "#007200",
@@ -26,7 +27,7 @@ function App() {
               colorPrimary: "black",
               colorPrimaryHover: "#006400",
               trackHeight: 24,
-              fontFamily: 'Glitch Goblin',
+              //fontFamily: 'Glitch Goblin',
             },
             Carousel: {
               colorBgContainer: '#007200'
